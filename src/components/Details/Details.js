@@ -12,7 +12,7 @@ const Details = (props) => {
     useEffect(() => {
         fetch(`./education.JSON`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => console.log(data.id))
     }, [])
 
     return (
