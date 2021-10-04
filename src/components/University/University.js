@@ -18,7 +18,7 @@ const University = () => {
     }
     return (
         <div className="university-container">
-            <h1 className="text-primary mb-5">Our University</h1>
+            <h1 className="uni mb-5">Our University</h1>
             <div className="search-box">
                 <input onChange={handleOnChange} type="text" className="p-2" placeholder="Enter university name" />
                 <div className="btn btn-danger">Search</div>
@@ -32,7 +32,7 @@ const University = () => {
                                     <div className="image">
                                         <img className="w-100" src={university.img} alt="" />
                                     </div>
-                                    <h2>{university.name}</h2>
+                                    <h2 className="text-primary">{university.name}</h2>
                                     <p>{university.title}</p>
                                     <p>{university.location}</p>
                                     <p>{university.country}</p>

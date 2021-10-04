@@ -5,7 +5,7 @@ import Menubar from '../Menubar/Menubar';
 
 const About = () => {
     return (
-        <div className="text-primary">
+        <div className="text-primary container">
             <Banner />
 
             <br />
