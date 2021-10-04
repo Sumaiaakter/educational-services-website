@@ -1,23 +1,56 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Banner from './components/Banner/Banner';
+import Footer from './components/Footer/Footer';
+import University from './components/University/University';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+
+} from "react-router-dom";
+
+import Home from './components/Home/Home';
+import Details from './components/Details/Details';
+import Academics from './components/Academics/Academics';
+import Error from './components/Error/Error';
+import Admission from './components/Admission/Admission';
+import About from './components/About/About';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Banner></Banner>
+      <University />
+      <Footer></Footer> */}
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/details/:id">
+            <Details></Details>
+          </Route>
+          <Route path="/academics">
+            <Academics></Academics>
+          </Route>
+          <Route exact path="/services">
+            <Admission></Admission>
+          </Route>
+          <Route exact path='/about'>
+            <About></About>
+          </Route>
+          <Route path="*">
+            <Error></Error>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
