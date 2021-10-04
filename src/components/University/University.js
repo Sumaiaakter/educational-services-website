@@ -19,7 +19,7 @@ const University = () => {
     return (
         <div className="university-container">
             <h1 className="uni mb-5">Our University</h1>
-            <div className="search-box">
+            <div className="search-box mb-5">
                 <input onChange={handleOnChange} type="text" className="p-2" placeholder="Enter university name" />
                 <div className="btn btn-danger">Search</div>
             </div>
@@ -29,7 +29,7 @@ const University = () => {
                         universities?.map(university =>
                             <div className="col-md-4">
                                 <div className="cart">
-                                    <div className="image">
+                                    <div className="image mb-5">
                                         <img className="w-100" src={university.img} alt="" />
                                     </div>
                                     <h2 className="text-primary">{university.name}</h2>

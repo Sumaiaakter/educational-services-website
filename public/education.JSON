@@ -98,7 +98,7 @@
     },
     {
         "name": "KUHC",
-        "id": 1002,
+        "id": 1011,
         "key": "KU02",
         "title": "Behind the Scenes of UMKC's New RoosDo Commercial",
         "desc": "The five-story, 57,800 square-foot Robert W. Plaster Free Enterprise and Research Center features 11 state-of-the-art research labs. It is the largest privately-funded capital project in UMKC history, with more than 25 donors.",
@@ -108,7 +108,7 @@
     },
     {
         "name": "MIT",
-        "id": 1003,
+        "id": 1012,
         "key": "MU03",
         "title": "UMKC Student Engeneering Team Wins First at National Competiton",
         "location": "NEW YORK",

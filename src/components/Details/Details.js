@@ -1,27 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import Menubar from '../Menubar/Menubar';
 import './Details.css';
 
-const Details = (props) => {
+const Details = () => {
     const { id } = useParams();
-    console.log(id)
-    const [details, setDetails] = useState();
+    // console.log(id)
+    const [details, setDetails] = useState([]);
+    const [singleDetails, setSingleDetails] = useState({});
+    console.log(details)
+    console.log(singleDetails)
 
     // data load
     useEffect(() => {
-        fetch(`./education.JSON`)
+        fetch(`/services.JSON`)
             .then(res => res.json())
-            .then(data => console.log(data.id))
-    }, [])
+            .then(data => setSingleDetails(data.services))
+    }, []);
+
+    useEffect(() => {
+        const foundService = details.find(services => services.id === id);
+        setSingleDetails(foundService);
+    }, [details])
 
     return (
-        <div className="details bg-green">
-            <Menubar></Menubar>
-            <div className="row d-flex align-items-center justify-content-center">
-                <div>{details?.desc}</div>
+        <div className="details">
+            <Menubar />
 
+            <div className="mt-5 bg-primary">
+                <h1>{id}</h1>
+                <h2>This is single detail: {setSingleDetails.facilities}</h2>
+                <h2>This is single detail: {setDetails.name}</h2>
             </div>
+
+
 
         </div>
     );
