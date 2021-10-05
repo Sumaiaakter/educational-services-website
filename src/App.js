@@ -31,13 +31,13 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
           </Route>
-          <Route path="/details/:id">
+          <Route exact path="/details/:id">
             <Details></Details>
           </Route>
-          <Route path="/academics">
+          <Route exact path="/academics">
             <Academics></Academics>
           </Route>
           <Route exact path="/services">
@@ -46,7 +46,7 @@ function App() {
           <Route exact path='/about'>
             <About></About>
           </Route>
-          <Route path="*">
+          <Route exact path="*">
             <Error></Error>
           </Route>
         </Switch>
